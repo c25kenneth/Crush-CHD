@@ -7,7 +7,6 @@ import pickle
 model = pickle.load(open("HeartDiseaseDetectModel.pickle", 'rb'))
 predict = model.predict([ [20, 4, 6, 5, 3, 3, 7] ])
 print("Model loaded successfully")
-print(predict)
 if (predict[0] == 0): 
     print("Healthy!")
 else: 
