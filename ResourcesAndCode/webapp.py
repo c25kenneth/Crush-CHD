@@ -11,7 +11,7 @@ print(predict)
 if (predict[0] == 0): 
     print("Healthy!")
 else: 
-    print("Dseased")
+    print("Diseased")
 #def predict_disease(sbp, tobacco, ldl, adiposity, bmi, alcohol, age):
  #   print(sbp)
 
