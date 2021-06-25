@@ -3,25 +3,20 @@ import pandas as pd
 import pickle
 #print("streamlit loaded successfully")
 
-#st.title("Cardio Disease Detection")
-model = pickle.load(open("HeartDiseaseDetectModel.pickle", 'rb'))
-predict = model.predict([ [20, 4, 6, 5, 3, 3, 7] ])
+st.title("Cardio Disease Detection")
+model = pickle.load(open("ResourcesAndCode\HeartDiseaseDetectModel.pickle", 'rb'))
 print("Model loaded successfully")
-if (predict[0] == 0): 
-    print("Healthy!")
-else: 
-    print("Diseased")
-#def predict_disease(sbp, tobacco, ldl, adiposity, bmi, alcohol, age):
- #   print(sbp)
+def predict_disease(sbp, tobacco, ldl, adiposity, bmi, alcohol, age):
+    prediction = model.predict([ [sbp, tobacco, ldl, adiposity, bmi, alcohol, age] ])
+    if (prediction[0] == 0): 
+        st.write("You are healthy!")
+    else: 
+        st.write("diseased!")
+predict_disease(sbp=90, tobacco=30, ldl=80, adiposity=80, bmi=500, alcohol=6000, age=100)
+hide_streamlit_style = """
+             <style>
+             #MainMenu {visibility: hidden;}
+             footer {visibility: hidden;}
+             </style>
+             """
 
-# hide_streamlit_style = """
-#             <style>
-#             #MainMenu {visibility: hidden;}
-#             footer {visibility: hidden;}
-#             </style>
-#             """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-# sl = st.slider(label= "Glucose", min_value = 0, max_value= 35)
-# st.write(sl)
-# st.selectbox("Chose age", ("1", "2", "3", "4", "5", "6", "7"))
