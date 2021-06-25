@@ -15,7 +15,7 @@ hide_streamlit_style = """
              footer {visibility: hidden;}
              </style>
              """
-
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 df = pd.read_csv("ResourcesAndCode\CHDdata.csv")
 
 st.dataframe(data = df.head(), width = 500, height = 500)
