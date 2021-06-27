@@ -7,4 +7,4 @@ Instructions (Running)
 
 2. Open a terminal window in the project directory.
 
-3. Run ```streamlit run ResourcesAndCode\webapp.py to run on localhost```. 
+3. Run ```streamlit run ResourcesAndCode\webapp.py``` to run on localhost. 
