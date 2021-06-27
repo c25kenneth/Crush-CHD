@@ -7,8 +7,8 @@ from PIL import Image
 
 st.title("Crush CHD")
 st.write("Coronary heart disease (CHD) is an extremly serious disease. It is now one of the most leading causes of death worldwide, even in developed countries. About 3.8 million men and 3.4 million women die every year from this disease. Luckily, Crush CHD can help. In a matter of seconds, without having to go to a doctor, an AI/Machine Learning model will help determine whether or not you have Coronary Heart Disease. Not only is this method non-invasive, it is also reliably accurate, having accuracy rates that are higher than standard methods. Standard methods hover around the low 70 percent mark, while Crush CHD has an accuracy rate of almost 80%.")
-image = Image.open("C:/Users/assist/Desktop/Machine Learning Projects/AppDevLeaugeHackathonGithubProject/ResourcesAndCode/robina-weermeijer-NIuGLCC7q54-unsplash.jpg")
-st.image(image, width = 290)
+#image = Image.open("C:/Users/assist/Desktop/Machine Learning Projects/AppDevLeaugeHackathonGithubProject/ResourcesAndCode/robina-weermeijer-NIuGLCC7q54-unsplash.jpg")
+#st.image(image, width = 290)
 model = pickle.load(open("ResourcesAndCode\HeartDiseaseDetectModel.pickle", 'rb'))
 
 
@@ -77,7 +77,7 @@ if (st.sidebar.button("Predict Results")):
         st.sidebar.text("")
         st.sidebar.text("")
         st.sidebar.text("")
-        st.sidebar.write("This person unfortunatly has Coronary Heart Disease")
+        st.sidebar.write("This person unfortunatly has Coronary Heart Disease. We recommend seeking out medical attention at a hospital soon. If symptoms are serious, we recommend calling emergency numbers right away.")
     elif (prediction[0] == 0):
         st.sidebar.text("")
         st.sidebar.text("")
