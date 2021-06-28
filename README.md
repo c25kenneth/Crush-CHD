@@ -9,6 +9,6 @@ Instructions (Running)
 
 3. Run ```streamlit run ResourcesAndCode\webapp.py``` to run on localhost. 
 
-4. If errors occur, you may need to install modules such as via typing in the command line ```pip install streamlit```
+4. If errors occur, you may need to install modules such as Streamlit via typing in the command line ```pip install streamlit```
 
 5. After the web app runs successfully, navigate to ```localhost:8501``` and try it out!
