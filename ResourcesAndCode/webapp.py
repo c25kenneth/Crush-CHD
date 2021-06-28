@@ -58,7 +58,7 @@ st.bar_chart(df['sbp'])
 st.write("Tobacco use (In Kilograms) among patients: ")
 st.bar_chart(df['tobacco'])
 
-st.sidebar.write("Directions: Enter in your data. All values are defaulted to zero. Sliders may be controlled with arrow keys. Simply click the slider that should be adjusted. After data is inputted, all you need to do is click 'Predict Results', sit back, and wait a few seconds for your answer!")
+st.sidebar.write("Direction: Enter in your data. All values are defaulted to zero. Sliders may be controlled with arrow keys. Simply click the slider that should be adjusted. After data is inputted, all you need to do is click 'Predict Results', sit back, and wait a few seconds for your answer!")
 def get_user_input(): 
     sbp = st.sidebar.slider("Stystolic Blood Pressure", min_value=0, max_value=300)
     tobacco = st.sidebar.slider("Yearly Tobacco Usage in Kilograms", min_value = 0, max_value = 75)
