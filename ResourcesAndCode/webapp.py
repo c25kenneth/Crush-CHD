@@ -31,8 +31,12 @@ st.dataframe(data = df.head(10), width = 500, height = 500)
 
 st.text("")
 st.text("")
+st.text("")
+st.text("")
 
 st.write("Below is some data about other patients who correspond to possibly being diagnosed with Coronary Heart Disease. Data charts can be zoomed in and out. Charts can also be downloaded in SVG and PNG format.")
+
+st.text("")
 
 st.write("Overall: ")
 chart = st.bar_chart(df)
@@ -74,7 +78,6 @@ users_input = get_user_input()
 if (st.sidebar.button("Predict Results")): 
     prediction = predictIt(users_input)
     if (prediction[0] == 1): 
-        st.sidebar.text("")
         st.sidebar.text("")
         st.sidebar.text("")
         st.sidebar.write("This person unfortunatly has Coronary Heart Disease. We recommend seeking out medical attention at a hospital soon. If symptoms are serious, we recommend calling emergency numbers right away.")
