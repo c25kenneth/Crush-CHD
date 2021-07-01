@@ -85,4 +85,4 @@ if (st.sidebar.button("Predict Results")):
         st.sidebar.text("")
         st.sidebar.text("")
         st.sidebar.text("") 
-        st.sidebar.write("      Congrats! This person is healthy!")
+        st.sidebar.write("Congrats! This person is healthy!")
