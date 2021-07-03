@@ -71,21 +71,22 @@ st.bar_chart(df['sbp'])
 st.write("Tobacco use (In Kilograms) among patients: ")
 st.bar_chart(df['tobacco'])
 
-st.sidebar.write("Directions: Enter in your data. All values are defaulted to zero. Sliders may be controlled with arrow keys. Simply click the slider that should be adjusted. After data is inputted, all you need to do is click 'Predict Results', sit back, and wait a few seconds for your answer!")
+st.sidebar.write("Directions: Enter in your data. All values are defaulted to zero. Either type the data in or use the + and - buttons.")
+st.text("")
+st.text("")
+# Gets user input from number fields
 
-# Gets user input from sliders
-
-def get_user_input(): 
-    sbp = st.sidebar.slider("Stystolic Blood Pressure", min_value=0, max_value=300)
-    tobacco = st.sidebar.slider("Yearly Tobacco Usage in Kilograms", min_value = 0, max_value = 75)
-    ldl = st.sidebar.slider("Low Density Lipoprotein", min_value = 0, max_value=35)
-    adiposity = st.sidebar.slider("Adiposity", min_value=0, max_value=100) 
-    bmi = st.sidebar.slider("BMI (Body Mass Index)", min_value = 0, max_value = 200)
-    alcohol = st.sidebar.slider("Alcohol Usage Yearly (Liters)", min_value = 0, max_value = 200)
-    age = st.sidebar.number_input("Age (Years)", value= 0)
+def get_user_input_number_field(): 
+    sbp = st.sidebar.number_input("Stystolic Blood Pressure", min_value=0, key="a")
+    tobacco = st.sidebar.number_input("Yearly Tobacco Usage in Kilograms", min_value = 0, key="b")
+    ldl = st.sidebar.number_input("Low Density Lipoprotein", min_value = 0, key="c")
+    adiposity = st.sidebar.number_input("Adiposity", min_value=0, key="d") 
+    bmi = st.sidebar.number_input("BMI (Body Mass Index)", min_value = 0, key="e")
+    alcohol = st.sidebar.number_input("Alcohol Usage Yearly (Liters)", min_value = 0, key="f")
+    age = st.sidebar.number_input("Age (Years)", value= 0, min_value = 0, key="f")
     return [sbp, tobacco, ldl, adiposity, bmi, alcohol, age]
 
-users_input = get_user_input()
+users_input = get_user_input_number_field()
 
 # Writes out the outcome
 if (st.sidebar.button("Predict Results")): 
@@ -93,9 +94,11 @@ if (st.sidebar.button("Predict Results")):
     if (prediction[0] == 1): 
         st.sidebar.text("")
         st.sidebar.text("")
-        st.sidebar.write("This person unfortunatly has Coronary Heart Disease. We recommend seeking out medical attention at a hospital soon. If symptoms are serious, we recommend calling emergency numbers right away.")
+        st.sidebar.write("This person unfortunatly has Coronary Heart Disease. We recommend seeking out medical attention at a hospital soon. If symptoms are serious, we strongly advise calling emergency numbers right away.")
     elif (prediction[0] == 0):
         st.sidebar.text("")
         st.sidebar.text("")
         st.sidebar.text("") 
         st.sidebar.write("Congrats! This person is healthy!")
+
+    
