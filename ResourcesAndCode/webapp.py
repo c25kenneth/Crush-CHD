@@ -1,19 +1,22 @@
-from altair.vegalite.v4.schema.channels import Color
+#import libraries 
 from numpy.core.fromnumeric import size
 import streamlit as st
 import pandas as pd
 import pickle
 from PIL import Image
 
+# description of project
 st.title("Crush CHD")
 st.write("Coronary heart disease (CHD) is an extremely serious disease. The disease occurs when the arteries clog up from plaque and cannot deliver enough blood to the heart. It is now one of the most leading causes of death worldwide, even in developed countries. About 3.8 million men and 3.4 million women die every year from this disease. Luckily, Crush CHD can help. In a matter of seconds, without having to go to a doctor, an AI/Machine Learning model will help determine whether or not you have Coronary Heart Disease. Not only is this method non-invasive, it is also reliably accurate, having accuracy rates that are higher than standard methods. Standard methods hover around the low 70 percent mark, while Crush CHD has an accuracy rate of almost 80%.")
 image = Image.open("C:/Users/assist/Desktop/Machine Learning Projects/AppDevLeaugeHackathonGithubProject/ResourcesAndCode/Heart-Picture.jpg")
 st.image(image, width = 290)
 model = pickle.load(open("ResourcesAndCode\HeartDiseaseDetectModel.pickle", 'rb'))
 
-
+# predicts based of user data
 def predictIt(dat): 
     return model.predict([dat])
+
+# hides bottom tag
 hide_streamlit_style = """
              <style>
              #MainMenu {visibility: hidden;}
@@ -21,11 +24,15 @@ hide_streamlit_style = """
              </style>
              """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+# Gets our csv data
 df = pd.read_csv("ResourcesAndCode\CHDdata.csv")
 
+# Fix Data
 df = df.drop("famhist", axis = 1)
 df = df.drop("typea", axis=1)
 
+# Displays data of patients in the past
 st.write("A few patients before you had these results. 0 represents healthy and 1 represents those who have the disease: ")
 st.dataframe(data = df.head(10), width = 500, height = 500)
 
@@ -40,6 +47,8 @@ st.text("")
 
 st.write("Overall: ")
 chart = st.bar_chart(df)
+
+# Display individual data
 
 st.write("Adiposity rates among patients: ")
 st.bar_chart(df['adiposity'])
@@ -63,6 +72,8 @@ st.write("Tobacco use (In Kilograms) among patients: ")
 st.bar_chart(df['tobacco'])
 
 st.sidebar.write("Directions: Enter in your data. All values are defaulted to zero. Sliders may be controlled with arrow keys. Simply click the slider that should be adjusted. After data is inputted, all you need to do is click 'Predict Results', sit back, and wait a few seconds for your answer!")
+
+# Gets user input from sliders
 def get_user_input(): 
     sbp = st.sidebar.slider("Stystolic Blood Pressure", min_value=0, max_value=300)
     tobacco = st.sidebar.slider("Yearly Tobacco Usage in Kilograms", min_value = 0, max_value = 75)
@@ -75,6 +86,7 @@ def get_user_input():
 
 users_input = get_user_input()
 
+# Writes out the outcome
 if (st.sidebar.button("Predict Results")): 
     prediction = predictIt(users_input)
     if (prediction[0] == 1): 
