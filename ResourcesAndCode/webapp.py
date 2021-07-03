@@ -71,7 +71,7 @@ st.bar_chart(df['sbp'])
 st.write("Tobacco use (In Kilograms) among patients: ")
 st.bar_chart(df['tobacco'])
 
-st.sidebar.write("Directions: Enter in your data. All values are defaulted to zero. Either type the data in or use the + and - buttons.")
+st.sidebar.write("Directions: Enter in your data. Data fields include systolic blood pressure, yearly tobacco usage in kilograms, low density lipoprotein, adiposity, BMI, yearly alcohol usage, and age. All values are defaulted to zero. Either type the data in or use the + and - buttons.")
 st.text("")
 st.text("")
 # Gets user input from number fields
