@@ -32,11 +32,13 @@ df = df.drop("famhist", axis = 1)
 df = df.drop("typea", axis=1)
 
 # Displays data of patients in the past
-st.write("A few patients before you had these results. 0 represents healthy and 1 represents those who have the disease: ")
+st.write("A few real life patients before you had these results. 0 represents healthy and 1 represents those who have the disease: ")
 st.dataframe(data = df.head(10), width = 500, height = 500)
 
+st.text("")
 st.bar_chart(data=df.head(10))
 
+st.text("")
 st.text("")
 st.text("")
 st.text("")
