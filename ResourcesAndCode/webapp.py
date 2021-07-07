@@ -1,5 +1,4 @@
 #import libraries 
-from numpy.core.fromnumeric import size
 import streamlit as st
 import pandas as pd
 import pickle
