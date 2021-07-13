@@ -18,7 +18,7 @@ Instructions (Running)
 
 2. Open a terminal window in the project directory.
 
-3. Run ```streamlit run ResourcesAndCode\webapp.py``` to run on localhost. 
+3. Run ```streamlit run ResourcesAndCode/CrushCHD.py``` to run on localhost. 
 
 4. If errors occur, you may need to install modules such as Streamlit via typing in the command line ```pip install streamlit```. Jupyter Notebooks may also be required to run     this project. 
 
