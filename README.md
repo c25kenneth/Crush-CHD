@@ -1,8 +1,6 @@
 # Coronary-Heart-Disease-Web-App
 An ADL (App Dev League) Hackathon Project! Crush CHD is a machine learning web app that is fully responsive and adapts to different screen resolutions. It uses a real machine learning/AI model to predict whether or not a person has Coronary Heart Disease. Users can easily input their data via the left-hand panel that opens up. After data is put in successfully, hit the "Predict Results" button and wait for results to show up! Data visualizations of real life patients can also be viewed if the patient scrolls down on the main panel. The data that is visualized can be scrolled in and out.
 
-<img src="Images/ProductImage1.png">
-
 Files: 
 1. ```CHDdata.csv``` is the csv file for the data used in this project. 
 
