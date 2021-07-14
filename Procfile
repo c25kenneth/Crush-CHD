@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run CrushCHD.py
+web: sh setup.sh && streamlit run ResourcesAndCode/CrushCHD.py
