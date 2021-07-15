@@ -20,6 +20,6 @@ Instructions (Running)
 
 3. Run ```streamlit run ResourcesAndCode/CrushCHD.py``` to run on localhost. 
 
-4. If errors occur, you may need to install modules such as Streamlit via typing in the command line ```pip install streamlit```. Jupyter Notebooks may also be required to run     this project. 
+4. If errors occur, you may need to install modules such as Streamlit via typing in the command line ```pip install streamlit```. Jupyter Notebooks, scikit-learn, and pandas may also be required to run this project. In an Conda environment type ```pip install sklearn pandas```. 
 
 5. After the web app runs successfully, navigate to ```localhost:8501``` and try it out!
