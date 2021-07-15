@@ -27,7 +27,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 # Gets our csv data
-df = pd.read_csv("ResourcesAndCode\CHDdata.csv")
+df = pd.read_csv("ResourcesAndCode/CHDdata.csv")
 # Fix Data
 df = df.drop("famhist", axis = 1)
 df = df.drop("typea", axis=1)
