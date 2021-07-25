@@ -1,5 +1,5 @@
 # Coronary-Heart-Disease-Web-App
-An ADL (App Dev League) Hackathon Project! Crush CHD is a machine learning web app that is fully responsive and adapts to different screen resolutions. It uses a real machine learning/AI model to predict whether or not a person has Coronary Heart Disease. Users can easily input their data via the left-hand panel that opens up. After data is put in successfully, hit the "Predict Results" button and wait for results to show up! Data visualizations of real life patients can also be viewed if the patient scrolls down on the main panel. The data that is visualized can be scrolled in and out.
+An ADL (App Dev League) Hackathon Project! Crush CHD is a machine learning web app that is fully responsive and adapts to different screen resolutions. It uses a real machine learning/AI model to predict whether or not a person has Coronary Heart Disease. Users can easily input their data via the left-hand panel that opens up. After data is put in successfully, hit the "Predict Results" button and wait for results to show up! Data visualizations of real life patients can also be viewed if the patient scrolls down on the main panel. The data that is visualized can be scrolled in and out. View full functionality at [https://crush-chd.herokuapp.com/]. 
 
 Files: 
 1. ```CHDdata.csv``` is the csv file for the data used in this project. 
@@ -12,14 +12,11 @@ Files:
 
 5. ```Heart-Picture.jpg``` is the image that is shown in our web app. 
 
-Instructions (Running)
 
-1. Clone github repository to your machine. 
+#Running Files
 
-2. Open a terminal window in the project directory.
+```Procfile```, ```requirements.txt```, ```runtime.txt```, and ```setup.sh``` are files that help the program to run on Heroku. 
 
-3. Run ```streamlit run ResourcesAndCode/CrushCHD.py``` to run on localhost. 
 
-4. If errors occur, you may need to install modules such as Streamlit via typing in the command line ```pip install streamlit```. Jupyter Notebooks, scikit-learn, and pandas may also be required to run this project. In an Conda environment type ```pip install sklearn pandas```. 
 
-5. After the web app runs successfully, navigate to ```localhost:8501``` and try it out!
+Product can be viewed at [https://crush-chd.herokuapp.com/].
