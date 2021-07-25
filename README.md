@@ -13,7 +13,9 @@ Files:
 5. ```Heart-Picture.jpg``` is the image that is shown in our web app. 
 
 
-#Running Files
+
+
+Running Files:
 
 ```Procfile```, ```requirements.txt```, ```runtime.txt```, and ```setup.sh``` are files that help the program to run on Heroku. 
 
